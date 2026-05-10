@@ -1,6 +1,6 @@
 
 ```markdown
-# 📊 LogScope - Real-Time Anomaly Detection in System Logs
+# LogScope - Real-Time Anomaly Detection in System Logs
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
@@ -11,11 +11,11 @@
 
 **Unsupervised anomaly detection for system logs that works out-of-the-box. No labels required. No manual rules.**
 
-[🏠 Live Demo](#) | [📊 Dashboard](#) | [📚 Documentation](#) | [🐛 Report Bug](#) | [💡 Request Feature](#)
+[Live Demo](#) | [Dashboard](#) | [Documentation](#) | [Report Bug](#) | [Request Feature](#)
 
 ---
 
-## 🎯 The Problem This Solves
+## The Problem This Solves
 
 Modern systems generate **terabytes of logs daily**. When something breaks, engineers grep through thousands of lines manually. Rules-based alerting misses novel failures. Labeled anomaly data doesn't exist.
 
@@ -25,16 +25,16 @@ Modern systems generate **terabytes of logs daily**. When something breaks, engi
 
 | Feature | Description |
 |---------|-------------|
-| 🔍 **Template Extraction** | Converts "User 123 logged in" → "User `<*>` logged in" using Drain3 algorithm |
-| 📈 **Three Detection Methods** | Frequency, parameter, and sequence anomalies - no single point of failure |
-| ⚡ **Real-time Processing** | Stream logs via WebSocket, get predictions in <50ms |
-| 🔄 **Online Learning** | Model updates after every log - adapts to system changes |
-| 📉 **Concept Drift Detection** | ADWIN algorithm alerts when log patterns fundamentally shift |
-| 🎨 **Live Dashboard** | Grafana + Loki showing anomaly heatmaps and alert history |
+| **Template Extraction** | Converts "User 123 logged in" → "User `<*>` logged in" using Drain3 algorithm |
+| **Three Detection Methods** | Frequency, parameter, and sequence anomalies - no single point of failure |
+| **Real-time Processing** | Stream logs via WebSocket, get predictions in <50ms |
+| **Online Learning** | Model updates after every log - adapts to system changes |
+| **Concept Drift Detection** | ADWIN algorithm alerts when log patterns fundamentally shift |
+| **Live Dashboard** | Grafana + Loki showing anomaly heatmaps and alert history |
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
@@ -55,7 +55,7 @@ Modern systems generate **terabytes of logs daily**. When something breaks, engi
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -107,7 +107,7 @@ streamlit run src/dashboard/app.py
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 logscope/
@@ -165,7 +165,7 @@ logscope/
 
 ---
 
-## 🔧 Core Components
+## Core Components
 
 ### 1. Log Parser (Drain3)
 
@@ -212,7 +212,7 @@ class OnlineLogMonitor:
 
 ---
 
-## 📊 Performance
+## Performance
 
 Tested on **HDFS log dataset** (11M lines, 0.8% anomalies):
 
@@ -235,19 +235,19 @@ Tested on **HDFS log dataset** (11M lines, 0.8% anomalies):
 
 ---
 
-## 🎓 What Makes This Intermediate/Advanced
+## What Makes This Intermediate/Advanced
 
-- ✅ **Unsupervised learning** on semi-structured text
-- ✅ **Online/streaming ML** (model updates per example)
-- ✅ **Three complementary detectors** with ensemble scoring
-- ✅ **Concept drift detection** (ADWIN algorithm)
-- ✅ **Production deployment** (FastAPI + WebSockets + Grafana)
-- ✅ **Comprehensive testing** (unit + integration)
-- ✅ **MLOps patterns** (config-driven thresholds, versioned models)
+- **Unsupervised learning** on semi-structured text
+- **Online/streaming ML** (model updates per example)
+- **Three complementary detectors** with ensemble scoring
+- **Concept drift detection** (ADWIN algorithm)
+- **Production deployment** (FastAPI + WebSockets + Grafana)
+- **Comprehensive testing** (unit + integration)
+- **MLOps patterns** (config-driven thresholds, versioned models)
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 ### Docker (Recommended)
 
@@ -280,19 +280,19 @@ kubectl apply -f k8s/
 
 ---
 
-## 📈 Real-World Use Cases
+## Real-World Use Cases
 
 | Industry | Use Case |
 |----------|----------|
-| 🏦 Finance | Detect unauthorized database access patterns |
-| 🛒 E-commerce | Find checkout failures before customers complain |
-| 🏥 Healthcare | Monitor HIPAA audit logs for anomalous access |
-| ☁️ Cloud providers | Detect misconfigurations from log patterns |
-| 🎮 Gaming | Find server crashes in real-time |
+| Finance | Detect unauthorized database access patterns |
+| E-commerce | Find checkout failures before customers complain |
+| Healthcare | Monitor HIPAA audit logs for anomalous access |
+| Cloud providers | Detect misconfigurations from log patterns |
+| Gaming | Find server crashes in real-time |
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
@@ -316,7 +316,7 @@ python benchmarks/benchmark.py --num_logs 100000
 
 ---
 
-## 📚 Technical Deep Dives (Blog Posts)
+## Technical Deep Dives (Blog Posts)
 
 I wrote detailed explanations of the core algorithms:
 
@@ -326,7 +326,7 @@ I wrote detailed explanations of the core algorithms:
 
 ---
 
-## 🧪 Run Your Own Experiments
+## Run Your Own Experiments
 
 ```python
 # Quick test on your own logs
@@ -342,13 +342,13 @@ with open("my_logs.txt") as f:
 
 ---
 
-## 📄 License
+## License
 
 MIT © [Your Name] - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Drain3](https://github.com/IBM/Drain3) for log parsing
 - [River](https://github.com/online-ml/river) for online learning utilities
@@ -356,7 +356,7 @@ MIT © [Your Name] - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 📧 Contact & Social
+## Contact & Social
 
 - **Author:** [Your Name]
 - **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
@@ -365,18 +365,18 @@ MIT © [Your Name] - see [LICENSE](LICENSE) for details.
 
 ---
 
-## ⭐ Star History
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=yourusername/logscope&type=Date)](https://star-history.com/#yourusername/logscope&Date)
 
 ---
 
-**Built with ❤️ for production ML engineering**
+**Built with love for production ML engineering**
 ```
 
 ---
 
-## Also Include a `requirements.txt`
+## Also Includes a `requirements.txt`
 
 ```txt
 # Core ML
