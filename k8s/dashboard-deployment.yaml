@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logscope-dashboard
+  namespace: logscope
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logscope-dashboard
+  template:
+    metadata:
+      labels:
+        app: logscope-dashboard
+    spec:
+      containers:
+        - name: dashboard
+          image: logscope:latest
+          imagePullPolicy: IfNotPresent
+          command: ["streamlit"]
+          args:
+            ["run", "src/dashboard/app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]
+          env:
+            - name: STREAMLIT_SERVER_HEADLESS
+              value: "true"
+            - name: API_BASE_URL
+              value: "http://logscope-api:8000"
+          ports:
+            - containerPort: 8501

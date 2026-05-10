@@ -1,0 +1,25 @@
+timestamp,level,user_id,source_ip,event,anomaly
+2026-05-10 09:00:00,INFO,1042,192.168.1.10,User logged in,false
+2026-05-10 09:01:12,INFO,2048,192.168.1.11,Viewed account overview,false
+2026-05-10 09:02:30,INFO,1184,192.168.1.12,Search performed,false
+2026-05-10 09:03:44,INFO,1672,192.168.1.13,Added item to cart,false
+2026-05-10 09:04:58,INFO,1501,192.168.1.14,Checkout started,false
+2026-05-10 09:06:10,INFO,1327,192.168.1.15,Payment method updated,false
+2026-05-10 09:07:21,WARN,1099,192.168.1.16,Multiple failed logins,false
+2026-05-10 09:08:35,INFO,2210,192.168.1.17,Password reset requested,false
+2026-05-10 09:09:49,INFO,1987,192.168.1.18,Profile settings changed,false
+2026-05-10 09:10:03,INFO,2441,192.168.1.19,Order confirmed,false
+2026-05-10 09:11:17,INFO,1755,192.168.1.20,Notification preferences saved,false
+2026-05-10 09:12:28,ERROR,3091,10.0.4.77,Connection timeout to database,true
+2026-05-10 09:13:42,INFO,2644,192.168.1.21,User logged out,false
+2026-05-10 09:14:56,INFO,1418,192.168.1.22,Viewed billing page,false
+2026-05-10 09:16:08,INFO,1739,192.168.1.23,Downloaded invoice,false
+2026-05-10 09:17:15,INFO,1882,192.168.1.24,Viewed transaction history,false
+2026-05-10 09:18:29,ERROR,4107,10.0.9.12,Unexpected spike in login attempts,true
+2026-05-10 09:19:33,INFO,2156,192.168.1.25,2FA challenge completed,false
+2026-05-10 09:20:47,INFO,2299,192.168.1.26,API key rotated,false
+2026-05-10 09:21:51,WARN,1773,192.168.1.27,Session nearing expiration,false
+2026-05-10 09:23:04,INFO,1488,192.168.1.28,Address book updated,false
+2026-05-10 09:24:19,ERROR,5220,172.16.7.55,Payment gateway rejected transaction,true
+2026-05-10 09:25:27,INFO,1633,192.168.1.29,Support ticket created,false
+2026-05-10 09:26:40,INFO,2011,192.168.1.30,User logged in,false

@@ -1,0 +1,9 @@
+normal:
+  - "INFO User <*> logged in from <*>"
+  - "INFO Heartbeat received from service <*>"
+  - "WARN Retry attempt <*> for request <*>"
+
+anomalous:
+  - "ERROR Connection timeout to database cluster <*>"
+  - "CRITICAL Authentication failure for admin user <*>"
+  - "WARN Sequence mismatch detected in workflow <*>"

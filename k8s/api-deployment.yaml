@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logscope-api
+  namespace: logscope
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: logscope-api
+  template:
+    metadata:
+      labels:
+        app: logscope-api
+    spec:
+      containers:
+        - name: api
+          image: logscope:latest
+          imagePullPolicy: IfNotPresent
+          command: ["uvicorn"]
+          args: ["src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+          envFrom:
+            - configMapRef:
+                name: logscope-api-config
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 20

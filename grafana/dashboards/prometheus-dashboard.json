@@ -1,0 +1,15 @@
+{
+  "annotations": {"list": []},
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Processed Logs",
+      "targets": [{"expr": "logscope_processed_total", "legendFormat": "processed"}],
+      "id": 1
+    }
+  ],
+  "schemaVersion": 27,
+  "title": "LogScope Prometheus",
+  "uid": "logscope-prometheus",
+  "version": 1
+}
