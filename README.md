@@ -1,5 +1,3 @@
-
-```markdown
 # LogScope - Real-Time Anomaly Detection in System Logs
 
 [![Python 3.14+](https://img.shields.io/badge/python-3.14+-blue.svg)](https://www.python.org/downloads/)
