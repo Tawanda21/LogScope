@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 from typing import Iterable, List
 
 try:
@@ -49,7 +50,8 @@ class ParameterDetector:
 
         matrix = self._pad_samples([sample])
         prediction = self._model.decision_function(matrix)[0]
-        return float(max(0.0, min(1.0, (0.5 - prediction) + 0.5)))
+        # Smooth the IsolationForest output instead of clamping it so anomaly scores spread out.
+        return float(1.0 / (1.0 + math.exp(6.0 * prediction)))
 
     @staticmethod
     def _pad_samples(samples: List[np.ndarray]) -> np.ndarray:

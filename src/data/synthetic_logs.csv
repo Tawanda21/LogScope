@@ -9,17 +9,26 @@ timestamp,level,user_id,source_ip,event,anomaly
 2026-05-10 09:08:35,INFO,2210,192.168.1.17,Password reset requested,false
 2026-05-10 09:09:49,INFO,1987,192.168.1.18,Profile settings changed,false
 2026-05-10 09:10:03,INFO,2441,192.168.1.19,Order confirmed,false
-2026-05-10 09:11:17,INFO,1755,192.168.1.20,Notification preferences saved,false
-2026-05-10 09:12:28,ERROR,3091,10.0.4.77,Connection timeout to database,true
-2026-05-10 09:13:42,INFO,2644,192.168.1.21,User logged out,false
-2026-05-10 09:14:56,INFO,1418,192.168.1.22,Viewed billing page,false
-2026-05-10 09:16:08,INFO,1739,192.168.1.23,Downloaded invoice,false
-2026-05-10 09:17:15,INFO,1882,192.168.1.24,Viewed transaction history,false
-2026-05-10 09:18:29,ERROR,4107,10.0.9.12,Unexpected spike in login attempts,true
-2026-05-10 09:19:33,INFO,2156,192.168.1.25,2FA challenge completed,false
-2026-05-10 09:20:47,INFO,2299,192.168.1.26,API key rotated,false
-2026-05-10 09:21:51,WARN,1773,192.168.1.27,Session nearing expiration,false
-2026-05-10 09:23:04,INFO,1488,192.168.1.28,Address book updated,false
-2026-05-10 09:24:19,ERROR,5220,172.16.7.55,Payment gateway rejected transaction,true
-2026-05-10 09:25:27,INFO,1633,192.168.1.29,Support ticket created,false
-2026-05-10 09:26:40,INFO,2011,192.168.1.30,User logged in,false
+2026-05-10 09:11:17,ERROR,3091,10.0.4.77,Connection timeout to database,true
+2026-05-10 09:12:28,ERROR,4107,10.0.9.12,Unexpected spike in login attempts,true
+2026-05-10 09:13:42,ERROR,5220,172.16.7.55,Payment gateway rejected transaction,true
+2026-05-10 09:14:56,ERROR,6145,10.1.5.88,Unauthorized API access attempt,true
+2026-05-10 09:16:08,ERROR,7234,203.0.113.42,Brute force login detected,true
+2026-05-10 09:17:15,ERROR,8012,10.2.3.45,Data exfiltration attempt flagged,true
+2026-05-10 09:18:29,ERROR,9087,172.18.10.99,Malicious SQL injection detected,true
+2026-05-10 09:19:33,ERROR,3456,10.0.0.5,Database connection compromised,true
+2026-05-10 09:20:47,ERROR,4562,203.0.113.100,Certificate validation failed,true
+2026-05-10 09:21:51,ERROR,5678,10.5.6.7,Suspicious file access detected,true
+2026-05-10 09:23:04,ERROR,6789,172.20.15.30,Denial of service attack detected,true
+2026-05-10 09:24:19,ERROR,7890,10.10.10.10,Privilege escalation attempt,true
+2026-05-10 09:25:27,ERROR,8901,203.0.113.200,Credential stuffing detected,true
+2026-05-10 09:26:40,ERROR,9012,10.15.20.25,Unusual geographic access,true
+2026-05-10 09:27:53,ERROR,3333,172.25.25.25,Memory overflow exploit attempt,true
+2026-05-10 09:29:06,ERROR,4444,10.30.40.50,Ransomware signature detected,true
+2026-05-10 09:30:15,ERROR,5555,203.0.113.150,Man-in-the-middle attack detected,true
+2026-05-10 09:31:22,ERROR,6666,10.50.60.70,Zero-day vulnerability exploited,true
+2026-05-10 09:32:38,ERROR,7777,172.30.35.40,Phishing attempt intercepted,true
+2026-05-10 09:33:45,ERROR,8888,10.60.70.80,Reverse shell connection detected,true
+2026-05-10 09:34:51,ERROR,9999,203.0.113.75,Lateral movement detected,true
+2026-05-10 09:35:58,ERROR,2222,10.70.80.90,Cryptomining malware detected,true
+2026-05-10 09:37:04,ERROR,1234,203.0.113.210,Unauthorized privilege elevation,true

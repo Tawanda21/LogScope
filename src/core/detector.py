@@ -37,8 +37,16 @@ class LogAnomalyDetector:
             sequence_score=sequence_score,
             drift_score=drift_score,
             anomaly_score=anomaly_score,
-            is_anomaly=anomaly_score >= 0.65,
-            explanation=self.explain(template, parameters, anomaly_score),
+            is_anomaly=anomaly_score >= 0.40,
+            explanation=self.explain(
+                template,
+                parameters,
+                frequency_score,
+                parameter_score,
+                sequence_score,
+                drift_score,
+                anomaly_score,
+            ),
         )
 
         self.frequency.update(template)
@@ -50,12 +58,38 @@ class LogAnomalyDetector:
     def combine_scores(*scores: float) -> float:
         if not scores:
             return 0.0
-        weighted = 0.35 * scores[0] + 0.25 * scores[1] + 0.25 * scores[2] + 0.15 * scores[3]
+        # Increased parameter_score (index 1) weight from 25% to 40% since it's a strong anomaly signal
+        weighted = 0.25 * scores[0] + 0.40 * scores[1] + 0.20 * scores[2] + 0.15 * scores[3]
         return max(0.0, min(1.0, weighted))
 
     @staticmethod
-    def explain(template: str, parameters: Iterable[str], anomaly_score: float) -> str:
-        if anomaly_score < 0.65:
-            return "Pattern is consistent with prior observations."
+    def explain(
+        template: str,
+        parameters: Iterable[str],
+        frequency_score: float,
+        parameter_score: float,
+        sequence_score: float,
+        drift_score: float,
+        anomaly_score: float,
+    ) -> str:
         parameter_text = ", ".join(parameters) if parameters else "no parameters"
-        return f"Unusual log pattern detected for template '{template}' with {parameter_text}."
+        if anomaly_score < 0.40:
+            return (
+                f"Normal pattern: frequency={frequency_score:.2f}, parameter={parameter_score:.2f}, "
+                f"sequence={sequence_score:.2f}, drift={drift_score:.2f}."
+            )
+
+        contributors: list[str] = []
+        if parameter_score >= 0.50:
+            contributors.append(f"parameter variance ({parameter_score:.2f})")
+        if sequence_score >= 0.45:
+            contributors.append(f"sequence shift ({sequence_score:.2f})")
+        if frequency_score >= 0.35:
+            contributors.append(f"rare template frequency ({frequency_score:.2f})")
+        if drift_score >= 0.50:
+            contributors.append("drift spike")
+        if not contributors:
+            contributors.append("combined weak signals")
+
+        reason_text = ", ".join(contributors)
+        return f"Anomaly driven by {reason_text} for template '{template}' with parameters {parameter_text}."
