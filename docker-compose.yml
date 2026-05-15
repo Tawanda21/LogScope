@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   api:
     image: python:3.14-slim
@@ -9,11 +11,11 @@ services:
       - "8000:8000"
 
   dashboard:
-    image: python:3.14-slim
+    build: .
     working_dir: /app
     volumes:
       - ./:/app
-    command: streamlit run src/dashboard/app.py --server.port 8501 --server.address 0.0.0.0
+    command: ["streamlit", "run", "src/dashboard/app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
     ports:
       - "8501:8501"
     depends_on:

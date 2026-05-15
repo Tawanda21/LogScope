@@ -7,45 +7,37 @@ import pandas as pd
 import streamlit as st
 
 from src.core.detector import LogAnomalyDetector
+from src.data.live_log_generator import start_background_generator
 
 
 st.set_page_config(page_title="LogScope Dashboard", layout="wide")
 st.title("LogScope")
-st.caption("Synthetic scaffold for streaming log anomaly inspection.")
+st.caption("Real-time log anomaly detection with live streaming data.")
 
 
-def load_synthetic_rows() -> pd.DataFrame:
-    data_path = Path(__file__).resolve().parents[1] / "data" / "synthetic_logs.csv"
-    if data_path.exists():
-        return pd.read_csv(data_path)
-    return pd.DataFrame(
-        [
-            {
-                "timestamp": "2026-05-10 10:00:00",
-                "level": "INFO",
-                "user_id": 1234,
-                "source_ip": "192.168.1.8",
-                "event": "User logged in",
-                "anomaly": False,
-            },
-            {
-                "timestamp": "2026-05-10 10:00:01",
-                "level": "INFO",
-                "user_id": 4321,
-                "source_ip": "192.168.1.11",
-                "event": "Viewed account overview",
-                "anomaly": False,
-            },
-            {
-                "timestamp": "2026-05-10 10:00:02",
-                "level": "ERROR",
-                "user_id": 7777,
-                "source_ip": "10.0.0.77",
-                "event": "Connection timeout to database",
-                "anomaly": True,
-            },
-        ]
+# Initialize session state for log generator
+if "log_generator_started" not in st.session_state:
+    st.session_state.log_generator_started = False
+    # Start the background log generator
+    live_logs_path = Path(__file__).resolve().parents[1] / "data" / "live_logs.csv"
+    start_background_generator(
+        output_file=str(live_logs_path),
+        log_interval=2.0,  # New log batch every 2 seconds
+        batch_size=1,  # 1 log per batch
     )
+    st.session_state.log_generator_started = True
+
+
+def load_live_logs(max_rows: int = 50) -> pd.DataFrame:
+    """Load live logs from the continuously-updated CSV file."""
+    live_logs_path = Path(__file__).resolve().parents[1] / "data" / "live_logs.csv"
+    
+    if live_logs_path.exists():
+        df = pd.read_csv(live_logs_path)
+        # Return the latest max_rows entries
+        return df.tail(max_rows).reset_index(drop=True)
+    
+    return pd.DataFrame()
 
 
 def highlight_anomalies(row: pd.Series) -> list[str]:
@@ -66,16 +58,42 @@ def highlight_anomaly_score(val: float) -> str:
 detector = LogAnomalyDetector()
 history = deque(maxlen=50)
 
-data = load_synthetic_rows()
-st.write(f"Loaded {len(data)} synthetic log rows.")
+# Load live logs and process them
+live_data = load_live_logs(max_rows=50)
 
-sample_logs = [
-    f"{row.timestamp} {row.level} User {row.user_id} from {row.source_ip} - {row.event}"
-    for row in data.itertuples(index=False)
-]
-
-for entry in sample_logs:
-    history.append(detector.score(entry).model_dump())
+if not live_data.empty:
+    st.write(f"Live logs: {len(live_data)} rows loaded (latest entries)")
+    
+    # Convert live logs to detector format and score them
+    sample_logs = []
+    for _, row in live_data.iterrows():
+        # Format log entry as a string for the detector
+        log_entry = (
+            f"{row.get('timestamp', 'N/A')} "
+            f"{row.get('method', 'N/A')} "
+            f"{row.get('endpoint', 'N/A')} "
+            f"from {row.get('ip_address', 'N/A')} "
+            f"status={row.get('status_code', 'N/A')} "
+            f"time={row.get('response_time_ms', 'N/A')}ms "
+            f"size={row.get('response_size_bytes', 'N/A')}B"
+        )
+        sample_logs.append(log_entry)
+    
+    for entry in sample_logs:
+        history.append(detector.score(entry).model_dump())
+    
+    # Add auto-refresh
+    st.markdown("""
+    <script>
+    setTimeout(function() {
+        document.body.style.opacity = "0.98";
+    }, 1000);
+    </script>
+    """, unsafe_allow_html=True)
+    st.info("Dashboard auto-refreshes as new logs arrive. Streamlit will reload in 10 seconds.")
+else:
+    st.warning("⏳ Waiting for live logs... The log generator is starting up. Check back in a moment.")
+    st.stop()
 
 frame = pd.DataFrame(history)
 review_frame = frame.copy()
@@ -140,5 +158,25 @@ chart_data["Anomaly Threshold (0.40)"] = 0.40
 st.line_chart(chart_data)
 
 st.divider()
-st.caption("🔴 Red cells = anomaly detected (score ≥ 0.40) | Emoji badges show detection summary")
+st.caption("Red cells = anomaly detected (score ≥ 0.40) | Emoji badges show detection summary")
+
+# Auto-refresh mechanism
+col1, col2 = st.columns([1, 1])
+with col1:
+    if st.button("Refresh Now"):
+        st.rerun()
+
+with col2:
+    st.info("Auto-reloading every 10 seconds for live updates...")
+    
+# JavaScript auto-refresh (10 seconds)
+st.markdown("""
+<script>
+setTimeout(function() {
+    document.querySelector('[data-testid="stApp"]').dispatchEvent(new Event('sessionStateRerun'));
+    location.reload();
+}, 10000);
+</script>
+""", unsafe_allow_html=True)
+
 
