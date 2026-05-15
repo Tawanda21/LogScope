@@ -746,3 +746,8 @@ timestamp,ip_address,method,endpoint,parameters,status_code,response_time_ms,res
 2026-05-15T14:51:18.097213,49.111.249.180,GET,/login,/login,201,258,706,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),13,False
 2026-05-15T14:51:20.101165,211.82.136.208,GET,/static/css,/static/css,200,489,42897,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),14,False
 2026-05-15T14:51:22.106291,17.3.56.136,DELETE,/static/css,/static/css,200,247,34091,Mozilla/5.0 (Windows NT 10.0; Win64; x64),17,False
+2026-05-15T14:51:24.110368,105.82.227.119,GET,/api/products,/api/products,304,328,767,python-requests/2.28.0,11,False
+2026-05-15T14:51:26.112665,155.212.146.231,GET,/login,/login,200,468,6666,curl/7.68.0,17,False
+2026-05-15T14:51:28.115498,88.126.13.244,POST,/api/products,/api/products,200,92,17588,curl/7.68.0,28,False
+2026-05-15T14:51:30.119281,175.165.3.4,GET,/api/health,/api/health,200,122,2438,Mozilla/5.0 (Windows NT 10.0; Win64; x64),33,False
+2026-05-15T14:51:32.123739,50.91.100.181,DELETE,/api/users,/api/users,200,258,1100,curl/7.68.0,22,False
