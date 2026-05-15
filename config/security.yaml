@@ -1,0 +1,77 @@
+"""Security module configuration."""
+
+# Brute Force Detector Settings
+brute_force:
+  window_minutes: 5
+  threshold_attempts: 10
+  alert_severity: "HIGH"
+  confidence: 0.95
+
+# SQL Injection Detector Settings
+sql_injection:
+  sensitivity: "medium"  # low, medium, high
+  alert_severity: "CRITICAL"
+  confidence: 0.99
+  patterns_count: 15
+
+# Privilege Escalation Detector Settings
+privilege_escalation:
+  alert_severity: "CRITICAL"
+  confidence: 0.88
+  monitor_sudo: true
+  monitor_setuid: true
+
+# Data Exfiltration Detector Settings
+exfiltration:
+  bytes_threshold_mb: 10
+  rate_threshold_mbps: 5.0
+  alert_severity: "CRITICAL"
+  confidence: 0.92
+  monitor_cloud_uploads: true
+
+# C2 Beacon Detector Settings
+beacon_detection:
+  min_beacon_interval: 30  # seconds
+  max_jitter_percentage: 20
+  alert_severity: "HIGH"
+  confidence: 0.85
+  suspicious_tlds:
+    - "top"
+    - "ml"
+    - "gq"
+    - "tk"
+    - "cf"
+
+# Alert Routing Settings
+alert_routing:
+  critical_action: "immediate_block"
+  high_action: "slack_alert"
+  medium_action: "dashboard_display"
+  low_action: "storage"
+
+# Slack Integration (if enabled)
+slack:
+  enabled: false
+  webhook_url: ""
+  channel: "#security-alerts"
+  mention_critical: "@here"
+
+# PagerDuty Integration (if enabled)
+pagerduty:
+  enabled: false
+  api_key: ""
+  service_id: ""
+
+# Metrics Export
+metrics:
+  enabled: true
+  port: 9090
+  path: "/metrics"
+  update_interval_seconds: 30
+
+# Performance Settings
+performance:
+  max_detectors: 5
+  timeout_ms: 1000
+  cache_enabled: true
+  cache_size_mb: 100

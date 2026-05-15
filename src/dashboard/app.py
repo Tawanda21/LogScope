@@ -8,11 +8,12 @@ import streamlit as st
 
 from src.core.detector import LogAnomalyDetector
 from src.data.live_log_generator import start_background_generator
+from src.security.orchestrator import SecurityOrchestrator
 
 
 st.set_page_config(page_title="LogScope Dashboard", layout="wide")
 st.title("LogScope")
-st.caption("Real-time log anomaly detection with live streaming data.")
+st.caption("Real-time log anomaly detection with live streaming data and security threat intelligence.")
 
 
 # Initialize session state for log generator
@@ -55,8 +56,11 @@ def highlight_anomaly_score(val: float) -> str:
     return ""
 
 
+# Initialize detectors
 detector = LogAnomalyDetector()
+security_orchestrator = SecurityOrchestrator()
 history = deque(maxlen=50)
+security_history = deque(maxlen=50)
 
 # Load live logs and process them
 live_data = load_live_logs(max_rows=50)
@@ -80,7 +84,21 @@ if not live_data.empty:
         sample_logs.append(log_entry)
     
     for entry in sample_logs:
-        history.append(detector.score(entry).model_dump())
+        ml_result = detector.score(entry).model_dump()
+        history.append(ml_result)
+        
+        # Run security analysis
+        security_alerts = security_orchestrator.analyze_log(entry)
+        if security_alerts:
+            security_history.append({
+                "log": entry,
+                "alerts": [a.to_dict() if hasattr(a, 'to_dict') else {
+                    "severity": a.severity,
+                    "attack_type": a.attack_type,
+                    "description": a.description,
+                } for a in security_alerts],
+                "count": len(security_alerts),
+            })
     
     # Add auto-refresh
     st.markdown("""
@@ -156,6 +174,50 @@ st.subheader("Anomaly Score Timeline with Threshold")
 chart_data = frame[["anomaly_score", "frequency_score", "parameter_score", "sequence_score"]].copy()
 chart_data["Anomaly Threshold (0.40)"] = 0.40
 st.line_chart(chart_data)
+
+# Security Alerts Section
+st.divider()
+st.subheader("🚨 Security Alerts")
+
+if security_history:
+    security_frame = pd.DataFrame(list(security_history))
+    st.info(f"Total security alerts detected: {len(security_frame)}")
+    
+    # Display security metrics
+    col1, col2, col3, col4 = st.columns(4)
+    metrics = security_orchestrator.get_all_metrics()
+    
+    with col1:
+        bf_alerts = metrics.get("BruteForceDetector", {}).get("alerts_raised", 0)
+        st.metric("Brute Force Attempts", bf_alerts)
+    
+    with col2:
+        sql_alerts = metrics.get("SQLInjectionDetector", {}).get("alerts_raised", 0)
+        st.metric("SQL Injections", sql_alerts)
+    
+    with col3:
+        priv_alerts = metrics.get("PrivilegeEscalationDetector", {}).get("alerts_raised", 0)
+        st.metric("Priv Escalations", priv_alerts)
+    
+    with col4:
+        exfil_alerts = metrics.get("ExfiltrationDetector", {}).get("alerts_raised", 0)
+        st.metric("Exfiltrations", exfil_alerts)
+    
+    # Render alerts with severity coloring
+    for idx, sec_alert in enumerate(security_frame.itertuples()):
+        if hasattr(sec_alert, 'alerts') and sec_alert.alerts:
+            for alert in sec_alert.alerts:
+                severity = alert.get("severity", "UNKNOWN")
+                if severity == "CRITICAL":
+                    st.error(f"🔴 **CRITICAL**: {alert.get('attack_type')} - {alert.get('description')}")
+                elif severity == "HIGH":
+                    st.warning(f"🟠 **HIGH**: {alert.get('attack_type')} - {alert.get('description')}")
+                elif severity == "MEDIUM":
+                    st.warning(f"🟡 **MEDIUM**: {alert.get('attack_type')} - {alert.get('description')}")
+                else:
+                    st.info(f"🔵 **LOW**: {alert.get('attack_type')} - {alert.get('description')}")
+else:
+    st.info("✓ No security threats detected")
 
 st.divider()
 st.caption("Red cells = anomaly detected (score ≥ 0.40) | Emoji badges show detection summary")

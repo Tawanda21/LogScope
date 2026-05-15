@@ -751,3 +751,199 @@ timestamp,ip_address,method,endpoint,parameters,status_code,response_time_ms,res
 2026-05-15T14:51:28.115498,88.126.13.244,POST,/api/products,/api/products,200,92,17588,curl/7.68.0,28,False
 2026-05-15T14:51:30.119281,175.165.3.4,GET,/api/health,/api/health,200,122,2438,Mozilla/5.0 (Windows NT 10.0; Win64; x64),33,False
 2026-05-15T14:51:32.123739,50.91.100.181,DELETE,/api/users,/api/users,200,258,1100,curl/7.68.0,22,False
+2026-05-15T14:51:34.127834,15.175.110.1,PUT,id=1' OR '1'='1,id=1' OR '1'='1&data=me,403,11097,567,python-requests/2.28.0,2,True
+2026-05-15T14:51:36.131697,79.158.31.163,GET,/dashboard,/dashboard,200,113,29811,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),12,False
+2026-05-15T14:51:38.135049,163.99.165.65,DELETE,/api/users,/api/users,201,246,228,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),45,False
+2026-05-15T14:51:40.139495,2.122.27.126,GET,/api/users,/api/users,200,470,35590,Mozilla/5.0 (Windows NT 10.0; Win64; x64),18,False
+2026-05-15T14:51:42.144123,22.123.231.216,GET,/login,/login,200,431,3711,python-requests/2.28.0,37,False
+2026-05-15T14:51:44.147814,136.224.239.123,GET,/api/orders,/api/orders,200,482,10644,python-requests/2.28.0,21,False
+2026-05-15T14:51:46.152501,159.177.20.124,GET,/api/orders,/api/orders,200,118,39614,Mozilla/5.0 (Windows NT 10.0; Win64; x64),17,False
+2026-05-15T14:51:48.156171,218.184.4.140,DELETE,/static/css,/static/css,201,323,637,python-requests/2.28.0,39,False
+2026-05-15T14:51:50.160953,95.221.59.62,PUT,/logout,/logout,200,289,5796,python-requests/2.28.0,50,False
+2026-05-15T14:51:52.165310,14.69.129.26,POST,/api/products,/api/products,200,423,24711,curl/7.68.0,18,False
+2026-05-15T14:51:54.170035,12.113.23.178,POST,/logout,/logout,304,58,258,python-requests/2.28.0,29,False
+2026-05-15T14:51:56.173740,215.67.35.40,DELETE,/api/products,/api/products,200,418,26922,python-requests/2.28.0,41,False
+2026-05-15T14:51:58.176663,82.51.47.28,DELETE,/api/health,/api/health,200,341,45269,curl/7.68.0,15,False
+2026-05-15T14:52:00.179525,43.187.105.72,GET,/api/users,/api/users,304,112,835,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),41,False
+2026-05-15T14:52:02.184110,198.87.145.49,GET,burst=true,burst=true&packets=4959,503,26315,921,curl/7.68.0,3,True
+2026-05-15T14:52:04.187363,140.147.40.198,GET,/logout,/logout,201,282,228,Mozilla/5.0 (Windows NT 10.0; Win64; x64),25,False
+2026-05-15T14:52:06.193782,7.212.22.217,GET,/api/orders,/api/orders,200,95,16565,curl/7.68.0,24,False
+2026-05-15T14:52:08.200200,70.71.10.138,PUT,/dashboard,/dashboard,201,259,249,python-requests/2.28.0,49,False
+2026-05-15T14:52:10.204314,165.179.34.244,PUT,user=cookcheryl,user=cookcheryl&attempt=46,403,356,878,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),1,True
+2026-05-15T14:52:12.205873,139.169.120.203,GET,/dashboard,/dashboard,200,403,1303,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),24,False
+2026-05-15T14:52:14.207426,119.6.153.242,POST,/logout,/logout,304,483,793,python-requests/2.28.0,39,False
+2026-05-15T14:52:16.209246,163.69.241.221,GET,/api/users,/api/users,200,375,35512,curl/7.68.0,8,False
+2026-05-15T14:52:18.211360,6.93.101.163,PUT,file=society.wav,file=society.wav&size=77MB,403,4245,178,python-requests/2.28.0,5,True
+2026-05-15T14:52:20.213979,171.41.184.119,GET,burst=true,burst=true&packets=3634,503,14142,243,python-requests/2.28.0,4,True
+2026-05-15T14:52:22.216645,137.133.227.94,GET,/dashboard,/dashboard,304,293,683,curl/7.68.0,7,False
+2026-05-15T14:52:24.218608,210.17.157.156,POST,/static/images,/static/images,200,244,38270,curl/7.68.0,16,False
+2026-05-15T14:52:26.220449,16.3.137.128,GET,/api/products,/api/products,201,365,870,Mozilla/5.0 (Windows NT 10.0; Win64; x64),15,False
+2026-05-15T14:52:28.222194,196.77.75.194,PUT,/api/health,/api/health,200,352,23851,curl/7.68.0,43,False
+2026-05-15T14:52:30.223595,172.15.6.136,GET,/api/users,/api/users,304,497,978,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),43,False
+2026-05-15T14:52:32.225779,40.130.68.13,GET,user=bhenderson,user=bhenderson&attempt=50,401,401,853,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),5,True
+2026-05-15T14:52:34.227442,113.146.93.18,GET,/static/images,/static/images,304,370,331,Mozilla/5.0 (Windows NT 10.0; Win64; x64),26,False
+2026-05-15T14:52:36.229271,13.175.63.34,GET,/static/images,/static/images,200,401,47534,Mozilla/5.0 (Windows NT 10.0; Win64; x64),27,False
+2026-05-15T14:52:38.230461,167.138.177.0,GET,/api/users,/api/users,304,324,984,Mozilla/5.0 (Windows NT 10.0; Win64; x64),46,False
+2026-05-15T14:52:40.232251,147.16.67.35,PUT,user=alisonwilson,user=alisonwilson&attempt=55,403,121,802,curl/7.68.0,4,True
+2026-05-15T14:52:42.233874,24.119.192.193,POST,/api/users,/api/users,200,112,8711,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),29,False
+2026-05-15T14:52:44.235229,157.1.150.67,GET,/api/health,/api/health,201,76,467,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),18,False
+2026-05-15T14:52:46.238937,96.45.7.12,POST,user=gonzalezvalerie,user=gonzalezvalerie&attempt=46,403,373,956,curl/7.68.0,4,True
+2026-05-15T14:52:48.242256,90.119.18.55,POST,/api/orders,/api/orders,200,407,937,python-requests/2.28.0,7,False
+2026-05-15T14:52:50.246085,74.236.83.60,GET,port=42897,port=42897&scan_type=syn,500,2715,851,Mozilla/5.0 (Windows NT 10.0; Win64; x64),4,True
+2026-05-15T14:52:52.248853,160.185.255.69,DELETE,/api/orders,/api/orders,200,144,44043,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),43,False
+2026-05-15T14:52:54.255362,15.39.115.247,GET,file=ever.json,file=ever.json&size=75MB,403,4075,852,Mozilla/5.0 (Windows NT 10.0; Win64; x64),2,True
+2026-05-15T14:52:56.259082,114.107.221.44,POST,/api/orders,/api/orders,200,161,21836,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),22,False
+2026-05-15T14:52:58.266474,118.162.163.89,POST,id=1' OR '1'='1,id=1' OR '1'='1&data=sell,400,9816,523,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),5,True
+2026-05-15T14:53:00.269313,14.77.244.211,GET,/static/images,/static/images,201,224,481,curl/7.68.0,6,False
+2026-05-15T14:53:02.271064,22.174.57.221,GET,/static/images,/static/images,304,79,155,python-requests/2.28.0,11,False
+2026-05-15T14:53:04.272285,173.150.73.150,GET,/api/health,/api/health,200,254,14817,python-requests/2.28.0,43,False
+2026-05-15T14:53:06.274878,30.199.192.22,PUT,/api/products,/api/products,200,311,12871,python-requests/2.28.0,38,False
+2026-05-15T14:53:08.277411,38.245.153.185,PUT,/static/images,/static/images,200,65,40632,curl/7.68.0,21,False
+2026-05-15T14:53:10.280371,110.248.244.16,GET,/api/products,/api/products,200,337,10903,curl/7.68.0,43,False
+2026-05-15T14:53:12.283886,14.212.117.236,GET,/api/orders,/api/orders,201,422,211,python-requests/2.28.0,7,False
+2026-05-15T14:53:14.288812,87.143.72.88,DELETE,/api/users,/api/users,201,270,158,python-requests/2.28.0,48,False
+2026-05-15T14:53:16.293498,155.245.136.34,GET,/static/css,/static/css,200,77,12697,curl/7.68.0,16,False
+2026-05-15T14:53:18.297199,34.87.182.130,GET,resource=/admin,resource=/admin&token=invalid,401,217,790,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),1,True
+2026-05-15T14:53:20.300180,145.234.239.222,DELETE,port=23496,port=23496&scan_type=syn,500,1177,710,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),2,True
+2026-05-15T14:53:22.303908,166.165.39.220,GET,/api/orders,/api/orders,201,96,134,python-requests/2.28.0,23,False
+2026-05-15T14:53:24.306284,213.27.42.53,GET,/login,/login,200,141,41591,python-requests/2.28.0,25,False
+2026-05-15T14:53:26.311433,174.223.250.79,POST,/api/health,/api/health,201,330,433,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),40,False
+2026-05-15T14:53:28.313268,80.117.47.176,DELETE,user=zacharyreyes,user=zacharyreyes&attempt=9,403,132,518,curl/7.68.0,4,True
+2026-05-15T14:53:30.314653,81.100.193.150,DELETE,user=katherine35,user=katherine35&attempt=60,403,486,850,python-requests/2.28.0,1,True
+2026-05-15T14:53:32.316895,187.134.133.39,POST,/login,/login,200,165,8653,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),8,False
+2026-05-15T14:53:34.318514,162.52.168.206,DELETE,/api/users,/api/users,201,270,780,python-requests/2.28.0,5,False
+2026-05-15T14:53:36.320279,145.129.165.149,PUT,/api/orders,/api/orders,200,477,32063,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),26,False
+2026-05-15T14:53:38.322331,192.10.9.253,PUT,user=ortizcrystal,user=ortizcrystal&attempt=57,403,272,728,curl/7.68.0,5,True
+2026-05-15T14:53:40.324158,115.102.239.102,PUT,/api/health,/api/health,200,256,37898,curl/7.68.0,9,False
+2026-05-15T14:53:42.325525,3.56.156.181,GET,/api/users,/api/users,200,150,35581,python-requests/2.28.0,22,False
+2026-05-15T14:53:44.326629,117.91.112.38,PUT,/login,/login,200,204,42339,Mozilla/5.0 (Windows NT 10.0; Win64; x64),30,False
+2026-05-15T14:53:46.327952,89.218.161.247,DELETE,/login,/login,200,117,26906,Mozilla/5.0 (Windows NT 10.0; Win64; x64),47,False
+2026-05-15T14:53:48.329251,88.18.9.77,PUT,/api/users,/api/users,200,446,6000,curl/7.68.0,24,False
+2026-05-15T14:53:50.330785,112.46.15.234,GET,/static/images,/static/images,200,349,36059,Mozilla/5.0 (Windows NT 10.0; Win64; x64),50,False
+2026-05-15T14:53:52.332776,209.93.23.24,GET,/logout,/logout,200,219,47845,python-requests/2.28.0,14,False
+2026-05-15T14:53:54.334605,89.243.127.26,GET,/dashboard,/dashboard,201,229,566,curl/7.68.0,12,False
+2026-05-15T14:53:56.337020,204.121.158.34,GET,/login,/login,200,347,1668,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),18,False
+2026-05-15T14:53:58.338482,30.153.3.177,GET,burst=true,burst=true&packets=1033,503,25819,816,curl/7.68.0,5,True
+2026-05-15T14:54:00.342400,125.62.222.159,PUT,resource=/admin,resource=/admin&token=invalid,401,322,659,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),4,True
+2026-05-15T14:54:02.350655,6.224.196.43,GET,/dashboard,/dashboard,200,427,32165,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),43,False
+2026-05-15T14:54:04.354529,128.56.159.44,DELETE,/api/health,/api/health,201,405,567,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),14,False
+2026-05-15T14:54:06.356928,210.142.199.191,GET,/api/users,/api/users,200,333,27362,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),36,False
+2026-05-15T14:54:08.360565,53.33.10.103,POST,/api/orders,/api/orders,200,452,11883,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),7,False
+2026-05-15T14:54:10.363500,62.155.59.15,GET,burst=true,burst=true&packets=8705,503,13502,269,Mozilla/5.0 (Windows NT 10.0; Win64; x64),3,True
+2026-05-15T14:54:12.368119,51.217.240.165,DELETE,/api/users,/api/users,200,280,8638,curl/7.68.0,25,False
+2026-05-15T14:54:14.375609,136.219.123.116,POST,/static/images,/static/images,200,69,12590,python-requests/2.28.0,43,False
+2026-05-15T14:54:16.382187,81.96.103.221,GET,resource=/admin,resource=/admin&token=invalid,401,788,721,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),5,True
+2026-05-15T14:54:18.388210,53.177.81.231,POST,file=simply.mov,file=simply.mov&size=97MB,403,4828,174,Mozilla/5.0 (Windows NT 10.0; Win64; x64),1,True
+2026-05-15T14:54:20.398520,16.31.117.229,PUT,/api/products,/api/products,200,370,8324,Mozilla/5.0 (Windows NT 10.0; Win64; x64),44,False
+2026-05-15T14:54:22.402581,115.122.70.245,POST,/logout,/logout,201,305,139,Mozilla/5.0 (Windows NT 10.0; Win64; x64),15,False
+2026-05-15T14:54:24.409392,191.207.38.33,PUT,id=1' OR '1'='1,id=1' OR '1'='1&data=air,403,10671,222,python-requests/2.28.0,1,True
+2026-05-15T14:54:26.412986,206.17.147.47,DELETE,/logout,/logout,200,385,826,curl/7.68.0,13,False
+2026-05-15T14:54:28.419181,72.44.126.218,GET,burst=true,burst=true&packets=7658,503,19501,981,python-requests/2.28.0,5,True
+2026-05-15T14:54:30.422047,19.139.249.131,DELETE,/logout,/logout,304,396,587,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),17,False
+2026-05-15T14:54:32.430023,9.229.149.196,PUT,/api/users,/api/users,200,367,34543,Mozilla/5.0 (Windows NT 10.0; Win64; x64),47,False
+2026-05-15T14:54:34.434489,70.230.184.212,POST,/static/images,/static/images,201,402,469,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),40,False
+2026-05-15T14:54:36.439030,132.80.71.230,DELETE,/api/products,/api/products,304,95,658,python-requests/2.28.0,30,False
+2026-05-15T14:54:38.444376,195.36.18.51,GET,/login,/login,201,198,933,curl/7.68.0,38,False
+2026-05-15T14:54:40.449806,123.152.224.34,GET,port=10502,port=10502&scan_type=syn,500,2395,179,python-requests/2.28.0,3,True
+2026-05-15T14:54:42.454718,218.166.44.4,GET,/api/orders,/api/orders,200,187,43879,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),17,False
+2026-05-15T14:54:44.460801,212.41.227.253,GET,/logout,/logout,304,326,535,curl/7.68.0,46,False
+2026-05-15T14:54:46.467757,93.178.41.28,DELETE,port=59037,port=59037&scan_type=syn,500,2855,627,curl/7.68.0,4,True
+2026-05-15T14:54:48.473766,148.110.125.211,GET,/api/products,/api/products,201,321,328,curl/7.68.0,18,False
+2026-05-15T14:54:50.477360,132.65.238.207,GET,/login,/login,201,215,549,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),41,False
+2026-05-15T14:54:52.486140,21.232.76.128,GET,file=modern.png,file=modern.png&size=80MB,403,2014,252,python-requests/2.28.0,1,True
+2026-05-15T14:54:54.494735,151.106.92.18,GET,/static/images,/static/images,200,394,27796,Mozilla/5.0 (Windows NT 10.0; Win64; x64),46,False
+2026-05-15T14:54:56.498948,26.2.116.130,DELETE,/api/orders,/api/orders,200,103,7692,Mozilla/5.0 (Windows NT 10.0; Win64; x64),6,False
+2026-05-15T14:54:58.504024,43.35.165.212,POST,/static/images,/static/images,200,212,41602,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),40,False
+2026-05-15T14:55:00.508750,88.146.6.20,GET,/logout,/logout,200,84,27146,Mozilla/5.0 (Windows NT 10.0; Win64; x64),38,False
+2026-05-15T14:55:02.517069,38.227.164.22,GET,/login,/login,200,79,619,python-requests/2.28.0,20,False
+2026-05-15T14:55:04.527016,126.149.82.150,GET,/api/orders,/api/orders,201,276,444,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),13,False
+2026-05-15T14:55:06.533524,98.239.81.128,GET,id=1' OR '1'='1,id=1' OR '1'='1&data=crime,403,12204,653,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),5,True
+2026-05-15T14:55:08.539092,20.36.127.87,GET,/static/css,/static/css,200,210,31001,Mozilla/5.0 (Windows NT 10.0; Win64; x64),32,False
+2026-05-15T14:55:10.549578,202.94.149.146,GET,burst=true,burst=true&packets=5831,503,28155,342,Mozilla/5.0 (Windows NT 10.0; Win64; x64),1,True
+2026-05-15T14:55:12.558304,134.89.44.215,PUT,burst=true,burst=true&packets=7485,503,28475,173,Mozilla/5.0 (Windows NT 10.0; Win64; x64),2,True
+2026-05-15T14:55:14.565927,8.58.43.220,GET,/static/css,/static/css,201,196,192,python-requests/2.28.0,36,False
+2026-05-15T14:55:16.578023,30.150.215.49,GET,burst=true,burst=true&packets=2098,503,21932,414,Mozilla/5.0 (Windows NT 10.0; Win64; x64),2,True
+2026-05-15T14:55:18.579761,181.240.197.124,DELETE,port=54447,port=54447&scan_type=syn,500,2755,203,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),1,True
+2026-05-15T14:55:20.580869,47.165.3.131,GET,/dashboard,/dashboard,200,181,30398,Mozilla/5.0 (Windows NT 10.0; Win64; x64),25,False
+2026-05-15T14:55:22.582457,53.92.59.91,POST,/static/css,/static/css,201,451,945,python-requests/2.28.0,16,False
+2026-05-15T14:55:24.584745,25.93.69.57,DELETE,/api/products,/api/products,201,72,384,curl/7.68.0,16,False
+2026-05-15T14:55:26.586124,2.216.56.144,GET,/api/users,/api/users,200,189,40069,curl/7.68.0,27,False
+2026-05-15T14:55:28.587254,174.101.246.194,GET,/static/images,/static/images,200,276,20818,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),31,False
+2026-05-15T14:55:30.589021,96.86.216.251,GET,/dashboard,/dashboard,200,295,11285,python-requests/2.28.0,10,False
+2026-05-15T14:55:32.590486,57.64.36.38,DELETE,/api/products,/api/products,200,109,40862,Mozilla/5.0 (Windows NT 10.0; Win64; x64),30,False
+2026-05-15T14:55:34.591947,139.152.234.106,GET,/static/images,/static/images,200,121,1868,curl/7.68.0,27,False
+2026-05-15T14:55:36.594597,21.220.60.79,GET,/static/css,/static/css,200,285,26536,python-requests/2.28.0,12,False
+2026-05-15T14:55:38.596864,18.114.247.134,DELETE,/login,/login,200,150,11278,curl/7.68.0,38,False
+2026-05-15T14:55:40.599396,100.195.69.55,GET,/api/orders,/api/orders,304,366,386,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),38,False
+2026-05-15T14:55:42.601957,49.15.160.156,PUT,port=58154,port=58154&scan_type=syn,500,2036,151,python-requests/2.28.0,4,True
+2026-05-15T14:55:44.604559,180.170.106.199,GET,user=smithjohn,user=smithjohn&attempt=15,403,322,351,curl/7.68.0,5,True
+2026-05-15T14:55:46.606745,5.72.79.90,GET,/dashboard,/dashboard,201,432,447,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),41,False
+2026-05-15T14:55:48.609452,69.240.221.254,POST,port=2435,port=2435&scan_type=syn,500,1335,578,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),3,True
+2026-05-15T14:55:50.611604,209.146.207.239,PUT,/api/products,/api/products,200,99,12965,curl/7.68.0,19,False
+2026-05-15T14:55:52.614351,180.32.177.165,POST,burst=true,burst=true&packets=1197,503,13601,228,Mozilla/5.0 (Windows NT 10.0; Win64; x64),3,True
+2026-05-15T14:55:54.617195,156.232.178.171,PUT,/static/images,/static/images,200,266,28071,python-requests/2.28.0,39,False
+2026-05-15T14:55:56.619923,91.235.203.126,PUT,/static/css,/static/css,200,301,46658,Mozilla/5.0 (Windows NT 10.0; Win64; x64),31,False
+2026-05-15T14:55:58.622645,20.248.114.88,GET,port=17878,port=17878&scan_type=syn,500,2029,636,Mozilla/5.0 (Windows NT 10.0; Win64; x64),3,True
+2026-05-15T14:56:00.624901,171.6.148.130,GET,/api/health,/api/health,200,420,7063,curl/7.68.0,40,False
+2026-05-15T14:56:02.627265,110.214.82.186,POST,/login,/login,201,249,183,python-requests/2.28.0,24,False
+2026-05-15T14:56:04.629603,200.64.245.16,GET,/api/users,/api/users,304,355,381,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),32,False
+2026-05-15T14:56:06.632416,64.0.254.80,DELETE,/api/orders,/api/orders,201,441,258,python-requests/2.28.0,44,False
+2026-05-15T14:56:08.636089,138.106.58.196,DELETE,resource=/admin,resource=/admin&token=invalid,401,490,451,python-requests/2.28.0,2,True
+2026-05-15T14:56:10.639180,28.79.172.101,GET,/static/images,/static/images,201,458,566,Mozilla/5.0 (Windows NT 10.0; Win64; x64),9,False
+2026-05-15T14:56:12.641565,166.160.40.169,GET,/login,/login,304,317,303,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),46,False
+2026-05-15T14:56:14.644540,222.48.211.118,GET,/static/images,/static/images,304,294,281,Mozilla/5.0 (Windows NT 10.0; Win64; x64),31,False
+2026-05-15T14:56:16.646957,2.146.28.246,GET,/login,/login,200,100,4989,curl/7.68.0,43,False
+2026-05-15T14:56:18.649715,36.128.54.162,GET,/logout,/logout,200,473,43050,Mozilla/5.0 (Windows NT 10.0; Win64; x64),48,False
+2026-05-15T14:56:20.652089,77.105.75.211,GET,resource=/admin,resource=/admin&token=invalid,401,375,801,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),1,True
+2026-05-15T14:56:22.655009,14.23.69.19,GET,/api/health,/api/health,200,311,12005,python-requests/2.28.0,35,False
+2026-05-15T14:56:24.657360,192.201.47.80,POST,/static/images,/static/images,200,130,16169,python-requests/2.28.0,26,False
+2026-05-15T14:56:26.660073,2.155.217.44,GET,/dashboard,/dashboard,200,349,38390,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),13,False
+2026-05-15T14:56:28.662994,105.98.13.31,PUT,burst=true,burst=true&packets=4865,503,22191,241,curl/7.68.0,4,True
+2026-05-15T14:56:30.665061,7.217.199.118,DELETE,/static/images,/static/images,200,146,36134,curl/7.68.0,18,False
+2026-05-15T14:56:32.668055,11.179.207.186,POST,port=24799,port=24799&scan_type=syn,500,2149,864,Mozilla/5.0 (Windows NT 10.0; Win64; x64),4,True
+2026-05-15T14:56:34.670292,99.127.238.46,GET,resource=/admin,resource=/admin&token=invalid,401,926,716,python-requests/2.28.0,2,True
+2026-05-15T14:56:36.672266,193.4.225.80,POST,user=michael48,user=michael48&attempt=41,403,415,899,curl/7.68.0,5,True
+2026-05-15T14:56:38.675400,90.150.192.54,DELETE,/dashboard,/dashboard,201,115,915,curl/7.68.0,25,False
+2026-05-15T14:56:40.677789,34.159.128.37,GET,/api/users,/api/users,200,345,30580,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),39,False
+2026-05-15T14:56:42.681204,35.71.77.184,PUT,user=bartonryan,user=bartonryan&attempt=93,403,294,249,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),5,True
+2026-05-15T14:56:44.683157,214.75.86.237,DELETE,/api/products,/api/products,200,139,21864,curl/7.68.0,34,False
+2026-05-15T14:56:46.687212,139.245.73.16,DELETE,resource=/admin,resource=/admin&token=invalid,401,596,493,curl/7.68.0,3,True
+2026-05-15T14:56:48.692891,20.255.249.29,GET,/api/health,/api/health,200,206,19091,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),31,False
+2026-05-15T14:56:50.696209,61.208.33.15,POST,id=1' OR '1'='1,id=1' OR '1'='1&data=movie,403,9221,632,python-requests/2.28.0,1,True
+2026-05-15T14:56:52.699484,92.183.29.187,GET,burst=true,burst=true&packets=6653,503,10213,397,python-requests/2.28.0,1,True
+2026-05-15T14:56:54.701862,45.198.196.204,POST,port=16563,port=16563&scan_type=syn,500,1924,804,python-requests/2.28.0,4,True
+2026-05-15T14:56:56.704192,102.152.126.15,DELETE,/api/health,/api/health,200,68,8952,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),50,False
+2026-05-15T14:56:58.706019,177.20.75.5,PUT,/login,/login,304,111,215,curl/7.68.0,49,False
+2026-05-15T14:57:00.708738,196.211.0.97,GET,/logout,/logout,201,298,505,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),42,False
+2026-05-15T14:57:02.710878,144.27.75.125,GET,/login,/login,200,380,3861,python-requests/2.28.0,46,False
+2026-05-15T14:57:04.713869,178.68.205.30,DELETE,burst=true,burst=true&packets=3801,503,15946,508,curl/7.68.0,1,True
+2026-05-15T14:57:06.719197,53.89.38.215,PUT,burst=true,burst=true&packets=6885,503,26860,319,curl/7.68.0,1,True
+2026-05-15T14:57:08.726695,12.86.157.69,GET,/api/users,/api/users,201,365,246,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),34,False
+2026-05-15T14:57:10.732642,81.249.216.192,PUT,/api/orders,/api/orders,201,400,208,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),46,False
+2026-05-15T14:57:12.737774,71.104.48.93,POST,/login,/login,201,117,843,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),31,False
+2026-05-15T14:57:14.742201,105.55.251.199,GET,/api/products,/api/products,200,221,19484,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),10,False
+2026-05-15T14:57:16.746969,16.177.143.219,DELETE,user=alyssa75,user=alyssa75&attempt=86,403,165,337,Mozilla/5.0 (Windows NT 10.0; Win64; x64),1,True
+2026-05-15T14:57:18.749934,17.127.85.220,GET,/static/css,/static/css,200,398,35291,python-requests/2.28.0,38,False
+2026-05-15T14:57:20.752762,14.78.116.95,GET,/logout,/logout,200,146,42267,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),30,False
+2026-05-15T14:57:22.760308,67.38.192.99,DELETE,id=1' OR '1'='1,id=1' OR '1'='1&data=baby,403,11024,955,curl/7.68.0,3,True
+2026-05-15T14:57:24.764630,51.245.29.193,GET,/api/health,/api/health,200,152,31640,curl/7.68.0,22,False
+2026-05-15T14:57:26.768461,65.241.151.200,GET,/static/images,/static/images,304,81,473,curl/7.68.0,47,False
+2026-05-15T14:57:28.770664,72.2.39.51,DELETE,/static/images,/static/images,200,458,33172,Mozilla/5.0 (Windows NT 10.0; Win64; x64),37,False
+2026-05-15T14:57:30.773150,198.120.23.25,PUT,id=1' OR '1'='1,id=1' OR '1'='1&data=agree,403,13619,968,curl/7.68.0,1,True
+2026-05-15T14:57:32.775596,142.202.86.206,GET,/api/orders,/api/orders,200,64,9004,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),33,False
+2026-05-15T14:57:34.777890,92.225.45.190,GET,/static/css,/static/css,200,128,22989,curl/7.68.0,35,False
+2026-05-15T14:57:36.780757,48.135.255.44,POST,file=big.mp3,file=big.mp3&size=71MB,403,4808,323,python-requests/2.28.0,3,True
+2026-05-15T14:57:38.784676,80.160.153.63,DELETE,/api/orders,/api/orders,201,420,565,python-requests/2.28.0,19,False
+2026-05-15T14:57:40.789289,169.175.39.49,PUT,/api/users,/api/users,200,491,46604,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),16,False
+2026-05-15T14:57:42.792030,132.133.109.98,PUT,/static/css,/static/css,200,299,23858,python-requests/2.28.0,26,False
+2026-05-15T14:57:44.794924,196.67.128.19,GET,/logout,/logout,200,484,28001,Mozilla/5.0 (Windows NT 10.0; Win64; x64),41,False
+2026-05-15T14:57:46.797466,62.98.45.62,GET,/dashboard,/dashboard,304,444,646,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),5,False
+2026-05-15T14:57:48.799657,142.179.90.243,POST,/login,/login,200,287,5141,Mozilla/5.0 (Windows NT 10.0; Win64; x64),7,False
+2026-05-15T14:57:50.801808,140.12.123.62,GET,/static/images,/static/images,200,200,30480,curl/7.68.0,28,False
+2026-05-15T14:57:52.804006,218.198.96.180,GET,/api/users,/api/users,200,286,23510,Mozilla/5.0 (Windows NT 10.0; Win64; x64),45,False
+2026-05-15T14:57:54.806391,192.23.233.254,GET,id=1' OR '1'='1,id=1' OR '1'='1&data=lawyer,400,6521,324,python-requests/2.28.0,1,True
+2026-05-15T14:57:56.809114,100.252.57.198,POST,/api/products,/api/products,200,148,34800,Mozilla/5.0 (Windows NT 10.0; Win64; x64),18,False
+2026-05-15T14:57:58.811122,131.177.213.92,DELETE,/static/images,/static/images,201,453,443,Mozilla/5.0 (Windows NT 10.0; Win64; x64),46,False
+2026-05-15T14:58:00.825081,32.33.225.111,GET,/api/orders,/api/orders,304,189,463,Mozilla/5.0 (Windows NT 10.0; Win64; x64),46,False
+2026-05-15T14:58:02.827407,195.234.78.103,PUT,/static/images,/static/images,200,218,22348,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7),50,False
+2026-05-15T14:58:04.845907,129.140.150.134,GET,port=9665,port=9665&scan_type=syn,500,2848,912,Mozilla/5.0 (Windows NT 10.0; Win64; x64),4,True
